@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Aschenbrenner - CWC Faculty Profile</title>
+    <style>
+        /* CWC Brand Colors inspired by cwc.edu */
+        :root {
+            --cwc-rust: #c63619;
+            --cwc-dark-gray: #333333;
+            --cwc-light-gray: #f4f4f4;
+            --text-color: #4a4a4a;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cwc-light-gray);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Header Section */
+        header {
+            background-color: var(--cwc-rust);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        header h2 {
+            margin: 0.5rem 0 0;
+            font-weight: 300;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        /* Profile Sidebar (Left) */
+        .profile-sidebar {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+            border-right: 1px solid #eee;
+            padding-right: 1rem;
+        }
+
+        .profile-img-placeholder {
+            width: 150px;
+            height: 150px;
+            background-color: var(--cwc-dark-gray);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            text-align: left;
+            font-size: 0.9rem;
+        }
+
+        .contact-info p {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-label {
+            font-weight: bold;
+            margin-right: 0.5rem;
+            color: var(--cwc-rust);
+        }
+
+        /* Content Area (Right) */
+        .profile-content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        h3 {
+            color: var(--cwc-dark-gray);
+            border-bottom: 2px solid var(--cwc-rust);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--cwc-dark-gray);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+            transition: background 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--cwc-rust);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--cwc-dark-gray);
+            color: white;
+            font-size: 0.8rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 650px) {
+            .profile-sidebar {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 2rem;
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>John Aschenbrenner</h1>
+        <h2>Automotive Instructor</h2>
+    </header>
+
+    <main class="container">
+        <aside class="profile-sidebar">
+            <div class="profile-img-placeholder">JA</div>
+            
+            <div class="contact-info">
+                <p><span class="contact-label">Office:</span> PT134A</p>
+                <p><span class="contact-label">Email:</span> <a href="mailto:Jaschenb@cwc.edu" style="color: inherit;">Jaschenb@cwc.edu</a></p>
+                <p><span class="contact-label">Location:</span> Riverton, WY</p>
+            </div>
+
+            <button class="btn" onclick="copyEmail()">Copy Email Address</button>
+            <p id="copy-status" style="font-size: 0.8rem; color: green; margin-top: 5px; height: 1.2em;"></p>
+        </aside>
+
+        <section class="profile-content">
+            <h3>About Me</h3>
+            <p>
+                As an Automotive Technology Instructor at Central Wyoming College (CWC), I am dedicated to preparing students for the rapidly evolving automotive industry. Joining the faculty in 2023, I focus on equipping students with the technical skills necessary to service the next generation of vehicles, including hybrid and electric technologies.
+            </p>
+            <p>
+                My goal is to provide hands-on training that bridges the gap between traditional mechanical knowledge and modern automotive diagnostics.
+            </p>
+
+            <h3>Education & Credentials</h3>
+            <ul>
+                <li><strong>B.S. Business Administration</strong> — University of Wyoming (1990)</li>
+                <li><strong>Instructor, Automotive Technology</strong> — Central Wyoming College (2023–Present)</li>
+            </ul>
+
+            <h3>Department</h3>
+            <p>Business, Technical, Health & Safety</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> John Aschenbrenner | Central Wyoming College</p>
+    </footer>
+
+    <script>
+        // Javascript to dynamically set the current year in the footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Javascript function to interact with the user
+        function copyEmail() {
+            const email = "Jaschenb@cwc.edu";
+            navigator.clipboard.writeText(email).then(() => {
+                const statusElement = document.getElementById('copy-status');
+                statusElement.textContent = "Email copied to clipboard!";
+                
+                // Clear message after 3 seconds
+                setTimeout(() => {
+                    statusElement.textContent = "";
+                }, 3000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert("Please manually copy the email: " + email);
+            });
+        }
+    </script>
+</body>
+</html>
